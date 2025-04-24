@@ -14,6 +14,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+    // api init 
 	api := api.New(mux.NewRouter(), db)
 	api.Endpoints()
 	log.Fatal(api.ListenAndServe(config.PORT))
